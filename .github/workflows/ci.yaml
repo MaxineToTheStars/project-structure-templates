@@ -70,4 +70,4 @@ jobs:
           git config user.email 146043018+MaxineToTheStars@users.noreply.github.com
           echo $(git add .)
           echo $(git commit -m "Updated Templates")
-          echo $(git push -f origin master)
+          echo $(git push)
