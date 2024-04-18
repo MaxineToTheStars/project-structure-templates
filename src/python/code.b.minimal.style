@@ -1,0 +1,31 @@
+# Import Statements
+# ----------------------------------------------------------------
+
+# ---
+
+# ---
+
+# ----------------------------------------------------------------
+
+# File Docstring
+# --------------------------------
+# %TEMPLATE_AUTHOR_HEADER%
+# ----------------------------------------------------------------
+
+# Constants
+
+# Public Variables
+
+# Private Variables
+
+# main
+def main() -> None:
+    print("Hello World")
+
+# Public Methods
+
+# Private Methods
+
+# Script Check
+if __name__ == "__main__":
+    main()

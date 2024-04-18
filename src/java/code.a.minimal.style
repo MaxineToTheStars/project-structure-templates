@@ -1,0 +1,41 @@
+// Package Declaration
+
+// Import Statements
+// ----------------------------------------------------------------
+
+// ---
+
+// ---
+
+// ----------------------------------------------------------------
+
+// File Docstring
+/**
+ * %TEMPLATE_AUTHOR_HEADER%
+ */
+
+// Class Definitions
+public class MyClass {
+    // Enums
+
+    // Interfaces
+
+    // Constants
+
+    // Public Variables
+
+    // Private Variables
+
+    // Constructor
+    public MyClass() {
+        return;
+    }
+
+    // Public Static Methods
+
+    // Public Inherited Methods
+
+    // Private Static Methods
+
+    // Private Inherited Methods
+}

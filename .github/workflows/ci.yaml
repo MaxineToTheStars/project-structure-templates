@@ -1,0 +1,73 @@
+# CI Workflow
+# ------------
+# GitHub CI workflow.
+#
+# Maintainer: MaxineToTheStars <https://github.com/MaxineToTheStars>
+# ------------------------------------------------------------------
+
+# Name of the workflow
+name: CI
+
+# Name of the workflow while running
+run-name: ci
+
+# Workflow triggers
+on:
+  # Scheduled cron job @ Every day at 12:00 AM
+  schedule:
+    - cron: "0 0 * * *"
+
+  # ALlow for manual triggering
+  workflow_dispatch:
+
+# Jobs
+jobs:
+  # Update repository
+  ci:
+    # Run in a Linux environment
+    runs-on: ubuntu-latest
+
+    # Job name
+    name: ci
+
+    # Setup container
+    container:
+      image: alpine
+      options: --cpus 2
+
+    # Set permissions
+    permissions:
+      contents: write
+
+    # Steps
+    steps:
+      # Download runtime dependencies
+      - name: ☄️ Downloading Runtime Dependencies ☄️
+        run: |
+          apk update && apk upgrade
+          apk add git
+
+      # Clone the repository
+      - name: 📩 Cloning Repository 📩
+        uses: actions/checkout@v4
+
+      # Setup Python
+      - name: 🐍 Setting-up Python 🐍
+        run: |
+          apk add python3
+
+      # Run the script
+      - name: Running CI Script
+        working-directory: ./util
+        run: |
+          python3 ci.py
+
+      # Commit the new changes
+      - name: 🚀 Committing Changes 🚀
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name CI
+          git config user.email 146043018+MaxineToTheStars@users.noreply.github.com
+          git add .
+          git commit -m "Updated Templates"
+          git push
