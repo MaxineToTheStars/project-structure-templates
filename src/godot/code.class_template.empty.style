@@ -1,27 +1,36 @@
-# Import Statements
-# ----------------------------------------------------------------
+# Class Declaration
 
-# ---
-
-# ---
-
-# ----------------------------------------------------------------
+# Inheriting From
 
 # File Docstring
 # --------------------------------
 # %TEMPLATE_AUTHOR_HEADER%
 # ----------------------------------------------------------------
 
+# Signals
+
+# Enums
+
 # Constants
+
+# Exported Variables
 
 # Public Variables
 
 # Private Variables
 
-# main
+# OnReady Variables
+
+# _init()
+
+# _enter_tree()
+
+# _ready()
+
+# _other()
 
 # Public Methods
 
 # Private Methods
 
-# Script Check
+# Subclasses
