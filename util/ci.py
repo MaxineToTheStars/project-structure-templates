@@ -1,5 +1,6 @@
 # Import Statements
 # ----------------------------------------------------------------
+from json import load
 from typing import Final
 from shutil import rmtree
 from os.path import isdir, join
@@ -13,7 +14,7 @@ from os import getcwd, listdir, makedirs
 
 # File Docstring
 # --------------------------------
-# CI/CD workflow.
+# CI/CD workflow for updating project templates.
 #
 # @author @MaxineToTheStars <https://github.com/MaxineToTheStars>
 # ----------------------------------------------------------------
@@ -26,9 +27,9 @@ class CI:
     # Interfaces
 
     # Constants
+    TEMPLATE_DICTIONARY: dict[str, str] = None
     SOURCE_TEMPLATES_INPUT_DIRECTORY: Final[str] = getcwd().replace("/util", "/src")
     SOURCE_TEMPLATES_OUTPUT_DIRECTORY: Final[str] = getcwd().replace("/util", "/templates")
-    TEMPLATE_DICTIONARY: Final[dict[str, str]] = {"%TEMPLATE_PROJECT_NAME%": "MyProject", "%TEMPLATE_AUTHOR_HEADER%": "@MaxineToTheStars <https://github.com/MaxineToTheStars>"}
 
     # Public Variables
 
@@ -45,6 +46,15 @@ class CI:
 
         @return None - None
         """
+
+        # Open the template dictionary
+        with open("./dict.json", "r") as templateDictionary:
+            # Save/load to memory
+            self.TEMPLATE_DICTIONARY = load(templateDictionary)
+
+            # Close the file handle
+            templateDictionary.close()
+
 
         # Check if the output directory exists
         if isdir(self.SOURCE_TEMPLATES_OUTPUT_DIRECTORY) == True:

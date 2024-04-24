@@ -1,0 +1,23 @@
+# %TEMPLATE_PROJECT_NAME% || Cargo.toml
+# --------------------------------
+# %TEMPLATE_PROJECT_NAME%'s rust manifest file.
+#
+# Authors: %TEMPLATE_AUTHOR_HEADER%
+# ----------------------------------------------------------------
+
+# Package Info
+[package]
+name = "%TEMPLATE_PROJECT_NAME%"
+version = "0.1.0"
+authors = ["%TEMPLATE_AUTHOR_HEADER%"]
+edition = "2021"
+rust-version = "1.56.0"
+description = "My Project"
+readme = "README.md"
+homepage = "%TEMPLATE_PROJECT_HOMEPAGE%"
+repository = "%TEMPLATE_PROJECT_REPOSITORY%"
+license = "GPL-3.0-only"
+license-file = "LICENSE"
+keywords = []
+categories = []
+build = false
