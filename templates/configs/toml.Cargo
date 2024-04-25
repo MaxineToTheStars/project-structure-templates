@@ -1,0 +1,23 @@
+# MyProject || Cargo.toml
+# --------------------------------
+# MyProject's rust manifest file.
+#
+# Authors: @MaxineToTheStars <https://github.com/MaxineToTheStars>
+# ----------------------------------------------------------------
+
+# Package Info
+[package]
+name = "MyProject"
+version = "0.1.0"
+authors = ["@MaxineToTheStars <https://github.com/MaxineToTheStars>"]
+edition = "2021"
+rust-version = "1.56.0"
+description = "My Project"
+readme = "README.md"
+homepage = "https://myproject.rs"
+repository = "https://github.com/MaxineToTheStars/my-project.git"
+license = "GPL-3.0-only"
+license-file = "LICENSE"
+keywords = []
+categories = []
+build = false
