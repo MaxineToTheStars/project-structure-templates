@@ -30,6 +30,7 @@ class CI:
     TEMPLATE_DICTIONARY: dict[str, str] = None
     SOURCE_TEMPLATES_INPUT_DIRECTORY: Final[str] = getcwd().replace("/util", "/src")
     SOURCE_TEMPLATES_OUTPUT_DIRECTORY: Final[str] = getcwd().replace("/util", "/templates")
+    EXCLUDE_FROM_EMBEDDED_DIRECTORY_CREATION: Final[list[str]] = ["configs"]
 
     # Public Variables
 
@@ -54,7 +55,6 @@ class CI:
 
             # Close the file handle
             templateDictionary.close()
-
 
         # Check if the output directory exists
         if isdir(self.SOURCE_TEMPLATES_OUTPUT_DIRECTORY) == True:
@@ -81,7 +81,7 @@ class CI:
             # Process files
             for foundInputFile in allFoundInputFiles:
                 # Check if the file is NOT a (dot) file
-                if foundInputFile.startswith(".") == False:
+                if (foundInputFile.startswith(".") == False and foundInputDirectory not in self.EXCLUDE_FROM_EMBEDDED_DIRECTORY_CREATION):
                     # Get the embedded file directory
                     embeddedFileDirectory: Final[list[str]] = foundInputFile.split(".")
 
@@ -111,7 +111,7 @@ class CI:
                         # Close the readOnly file handle
                         readOnlyFile.close()
 
-                elif foundInputFile.startswith(".") == True:
+                elif (foundInputFile.startswith(".") == True or foundInputDirectory in self.EXCLUDE_FROM_EMBEDDED_DIRECTORY_CREATION):
                     # Create the new output directory
                     makedirs(fullOutputDirectoryBasePath, exist_ok=True)
 
