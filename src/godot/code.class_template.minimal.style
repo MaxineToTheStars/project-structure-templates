@@ -6,7 +6,7 @@ extends Node
 
 # File Docstring
 # --------------------------------
-# %TEMPLATE_AUTHOR_HEADER%
+# @author %TEMPLATE_AUTHOR_HEADER%
 # ----------------------------------------------------------------
 
 # Signals
