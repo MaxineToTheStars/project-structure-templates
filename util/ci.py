@@ -30,7 +30,7 @@ class CI:
     TEMPLATE_DICTIONARY: dict[str, str] = None
     SOURCE_TEMPLATES_INPUT_DIRECTORY: Final[str] = getcwd().replace("/util", "/src")
     SOURCE_TEMPLATES_OUTPUT_DIRECTORY: Final[str] = getcwd().replace("/util", "/templates")
-    EXCLUDE_FROM_EMBEDDED_DIRECTORY_CREATION: Final[list[str]] = ["configs"]
+    EXCLUDE_FROM_EMBEDDED_DIRECTORY_CREATION: Final[list[str]] = ["configs", "misc"]
 
     # Public Variables
 
@@ -94,12 +94,12 @@ class CI:
                     makedirs(join(fullOutputDirectoryBasePath, generatedPaths), exist_ok=True)
 
                     # Create the new output file
-                    open(join(fullOutputDirectoryBasePath, generatedPaths, (embeddedFileDirectory[-1] + "." + embeddedFileDirectory[-2])), "x").close()
+                    open(join(fullOutputDirectoryBasePath, generatedPaths, (embeddedFileDirectory[-2] + "." + embeddedFileDirectory[-1])), "x").close()
 
                     # Open the input file as Read-Only
                     with open(join(fullInputDirectoryBasePath, foundInputFile), "r") as readOnlyFile:
                         # Open the output file as Write-Only
-                        with open(join(fullOutputDirectoryBasePath, generatedPaths, (embeddedFileDirectory[-1] + "." + embeddedFileDirectory[-2])), "w") as writeOnlyFile:
+                        with open(join(fullOutputDirectoryBasePath, generatedPaths, (embeddedFileDirectory[-2] + "." + embeddedFileDirectory[-1])), "w") as writeOnlyFile:
                             # Iterate through each line
                             for line in readOnlyFile.readlines():
                                 # Write the new formatted line
