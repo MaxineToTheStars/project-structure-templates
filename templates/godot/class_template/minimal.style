@@ -1,0 +1,44 @@
+# Class Declaration
+class_name MyClass
+
+# Inheriting From
+extends Node
+
+# File Docstring
+# --------------------------------
+# @author @MaxineToTheStars <https://github.com/MaxineToTheStars>
+# ----------------------------------------------------------------
+
+# Signals
+
+# Enums
+
+# Constants
+
+# Exported Variables
+
+# Public Variables
+
+# Private Variables
+
+# OnReady Variables
+
+# _init()
+func _init() -> void:
+    print("Created!")
+
+# _enter_tree()
+func _enter_tree() -> void:
+    print("Preparing!")
+
+# _ready()
+func _ready() -> void:
+    print("Hello World!")
+
+# _other()
+
+# Public Methods
+
+# Private Methods
+
+# Subclasses
