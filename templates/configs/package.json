@@ -1,0 +1,21 @@
+{
+  "name": "MyProject",
+  "version": "0.1.0",
+  "description": "MyProject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"TODO: Write unit tests\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "@MaxineToTheStars <https://github.com/MaxineToTheStars>"
+  },
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "express": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
