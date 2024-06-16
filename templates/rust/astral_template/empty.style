@@ -1,11 +1,18 @@
+// Namespace Attributes
+
+// Crate Declarations
+// ----------------------------------------------------------------
+
+// ---
+
+// ---
+
+// ----------------------------------------------------------------
+
 // File Docstring
 // --------------------------------
 // @author @MaxineToTheStars <https://github.com/MaxineToTheStars>
 // ----------------------------------------------------------------
-
-// Namespace Attributes
-
-// Crate Declarations
 
 // Module Definitions
     // Struct Definitions
@@ -15,10 +22,6 @@
     // Type Definitions
 
     // Trait Definitions
-
-    // Public Functions
-
-    // Private Methods
 
     // Public Methods
 
@@ -32,8 +35,8 @@
 
 // Trait Definitions
 
-// Main Method
+// Main
 
-// Functions
+// Public Methods
 
-// Methods
+// Private Methods
