@@ -1,3 +1,4 @@
+<!-- CI Badge -->
 [![CI](https://github.com/MaxineToTheStars/project-structure-templates/actions/workflows/ci.yaml/badge.svg?event=schedule)](https://github.com/MaxineToTheStars/project-structure-templates/actions/workflows/ci.yaml)
 
 <!-- Move text down -->
